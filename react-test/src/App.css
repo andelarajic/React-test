@@ -22,3 +22,9 @@
     margin-right: -50%;
     transform: translate(-50%, -50%);
 }
+
+@media (max-width: 500px) {
+    .App {
+        flex-direction: column;
+    }
+}
