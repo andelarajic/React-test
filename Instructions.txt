@@ -1,0 +1,22 @@
+# React test
+React test for interns
+
+This project contains two class components and basic CSS. 
+If you would like to work with functional components instead or install your own CSS preprocessor like Sass or Less, we encourage you to do that. Extra points if you install and use TypeScript because we always use React + TypeScript in our project.
+
+Tasks
+For each task you complete, create a commit and specify which task the changes is for. For example "Task 1 Centered text", 
+
+Ok enough talk! Let's code :)
+
+Start the react-test project with `npm install` and then `npm start`:
+
+Tasks:
+You will see two components after you started the project. Component A and B.
+1. Center the text in each component. Both vertically and horizontally.
+2. Display Component A and B in a row instead of stacking them vertically.
+3. Create a button in both Component A and B. When clicked, the background of that component should be of the color lightpink. The other one should still be aquamarine.
+4. Notice when setting one of the components background to lightpink and refreshing the page both component backgrounds changes back to aquamarine. Create a code that persists the lightpink background in the component that was changed to lightpink. For example if the user pressed the button in Component A and changed the background to lightpink and then refreshed the page. Component A background should still be the lightpink color.
+5. Create a input under the title in Component A. Render the text entered in the Component A input under the title in Component B.
+6. Persist the text value when refreshing the page.
+7. Stack Component A and B vertically when the screen size is under 500px.
