@@ -7,7 +7,7 @@ function App() {
   const [text, setText] = useState('')
   return (
     <div className="App">
-      <ComponentA setText={setText} />
+      <ComponentA setText={setText} text={text}/>
       <ComponentB text={text} />
     </div>
   );

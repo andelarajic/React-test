@@ -6,6 +6,8 @@ export default class ComponentA extends Component {
         super(props)
         const color = localStorage.getItem('color-a')
         this.state = { color: color ? color : green }
+        const text = localStorage.getItem('text')
+        this.props.setText(text ? text : "")
     }
 
     changeColor() {
@@ -16,6 +18,7 @@ export default class ComponentA extends Component {
 
     changeText(input) {
         this.props.setText(input)
+        localStorage.setItem('text', input) 
     }
 
     render() {
@@ -25,7 +28,7 @@ export default class ComponentA extends Component {
                 <button onClick={() => {
                     this.changeColor()
                 }}>Click</button>
-                <input type='text' onChange={e => this.changeText(e.target.value)} />
+                <input type='text' value={this.props.text} onChange={e => this.changeText(e.target.value)} />
             </div>
         )
     }
