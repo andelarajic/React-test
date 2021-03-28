@@ -4,12 +4,14 @@ import { green, pink } from '../../constants'
 export default class ComponentB extends Component {
     constructor(props) {
         super(props)
-        this.state = { color: green }
+        const color = localStorage.getItem('color-b')
+        this.state = { color: color ? color : green }
     }
 
     changeColor() {
         const newColor = this.state.color === green ? pink : green
         this.setState({ color: newColor })
+        localStorage.setItem('color-b', newColor)
     }
 
     render() {
