@@ -14,6 +14,10 @@ export default class ComponentA extends Component {
         localStorage.setItem('color-a', newColor)
     }
 
+    changeText(input) {
+        this.props.setText(input)
+    }
+
     render() {
         return (
             <div className={"component"} style={{ background: this.state.color }}>
@@ -21,6 +25,7 @@ export default class ComponentA extends Component {
                 <button onClick={() => {
                     this.changeColor()
                 }}>Click</button>
+                <input type='text' onChange={e => this.changeText(e.target.value)} />
             </div>
         )
     }

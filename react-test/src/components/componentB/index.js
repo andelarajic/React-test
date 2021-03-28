@@ -17,10 +17,11 @@ export default class ComponentB extends Component {
     render() {
         return (
             <div className={"component"} style={{ background: this.state.color }}>
-                <span className={"component_title"}> Component B </span>
                 <button onClick={() => {
                     this.changeColor()
                 }}>Click</button>
+                <span className={"component_title"}> Component B </span>
+                <span className={"component_text"}>{this.props.text}</span>
             </div>
         )
     }
